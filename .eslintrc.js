@@ -7,8 +7,9 @@ module.exports = {
     es6: true,
     browser: true,
     node: true,
+    'jest/globals': true,
   },
-  plugins: ['svelte3'],
+  plugins: ['svelte3', 'jest'],
   overrides: [
     {
       files: ['*.svelte'],
@@ -18,6 +19,11 @@ module.exports = {
   extends: 'eslint:recommended',
   rules: {
     'no-console': 'warn',
-    'semi': ['error', 'never'],
-  }
+    semi: ['error', 'never'],
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
+  },
 }

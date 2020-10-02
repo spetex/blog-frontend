@@ -40,7 +40,7 @@ export default {
         babel({
           extensions: ['.js', '.mjs', '.html', '.svelte'],
           babelHelpers: 'runtime',
-          exclude: ['node_modules/@babel/**'],
+          exclude: ['node_modules/@babel/**', 'tests'],
           presets: [
             [
               '@babel/preset-env',
