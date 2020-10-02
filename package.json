@@ -31,7 +31,9 @@
     "eslint": "^7.10.0",
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "prettier-plugin-svelte": "^1.4.0",
     "rollup": "^2.3.4",
@@ -40,5 +42,14 @@
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
     "svelte-jester": "^1.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,svelte}": "eslint --cache --fix",
+    "*.{js,css,md,svelte}": "prettier --write"
   }
 }
